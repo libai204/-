@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <style>
+        /* 所有标签内外边距清零 */
+        * {
+            /* height: 100%; */
+            /* width: 100%; */
+            margin: 0;
+            padding: 0;
+            /* css3盒子模型 */
+            /* box-sizing: border-box; */
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            background: #000;
+            background: url(../images/nybj.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            line-height: 1.15;
+
+        }
+
+
+        h1 {
+            color: #FFF;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        h2 {
+            color: #FFF;
+            text-align: center;
+        }
+
+        .container {
+            margin: 100px auto;
+            width: 30%;
+        }
+
+        form {
+            background: #FFF;
+            height: 350px;
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        p {
+            text-align: right;
+            margin-right: 40px;
+            height: 30px;
+        }
+
+
+        label {
+            color: #000;
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 40px;
+        }
+
+        input {
+            text-align: left;
+            margin: 10px;
+        }
+
+        .input {
+            width: 80%;
+            height: 35px;
+            margin-left: 40px;
+        }
+
+        .checkbox {
+            margin-left: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .submit {
+            display: inline-block;
+            margin-top: 0;
+            margin-left: 175px;
+            background: #000;
+            border: none;
+            color: #FFF;
+            height: 35px;
+            width: 100px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .left {
+            margin: 20px;
+        }
+
+        .right {
+            position: absolute;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>抽油机控制系统监控中心</h1>
+        <br>
+        <br>
+        <h2>用户登录</h2>
+        <br>
+        <br>
+        <form>
+            <p></p>
+            <label for="username">用户名</label><br>
+            <input type="text" name="username" id="username" class="input" placeholder="用户名"><br>
+            <label for="pwd">密码</label><br>
+            <input type="password" name="" id="pwd" class="input" placeholder="密码">
+            <div class="checkbox">
+                <input type="checkbox" name="">
+                <span>记住密码</span>
+            </div>
+            <br>
+            <button type="submit" class="submit" onclick="submits(this)">开始登录</button>
+        </form>
+    </div>
+    <script>
+        function submits(btn) {
+            var userName = document.getElementById("username").value;
+            var pwd = document.getElementById("pwd").value;
+            console.log(userName)
+            if (userName == "姚春晖" && pwd == "123456") {
+                window.Location.href = "监控首页.html"
+
+            }
+            else {
+                alert("用户名或密码不正确！");
+            }
+        };
+    </script>
+</body>
+
+</html>
